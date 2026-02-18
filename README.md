@@ -220,6 +220,8 @@ This one needs a lot of changes
 
 ```
 
+<hr>
+
 ## Step 5 : Bonus
 
 Add to your content a display, this way 
