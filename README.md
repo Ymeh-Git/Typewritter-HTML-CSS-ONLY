@@ -142,3 +142,24 @@ body{
 }
 ```
 
+### Step 4.2 : Second animation cursor (blinking animation)
+
+```
+
+.container .content ol li span{
+
+[...]
+
+/* This will mimic a typewritter cursor */
+border-right: 3px solid #fff;
+animation: cursor .8s step-end infinite;
+
+}
+
+@keyframes cursor {
+    /* Since it's already white, you only to make it disapear */
+    50%{
+        border-color: transparent;
+    }
+}
+```

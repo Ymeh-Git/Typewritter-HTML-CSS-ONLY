@@ -4,7 +4,7 @@
     margin: 0;
     box-sizing: border-box;
     /* Change your font if you want to */
-    color: #ffffff;
+    color: #fff;
 }
 
 body{
@@ -50,6 +50,12 @@ body{
     background: linear-gradient(to right, #2593ee, #bee62d);
     /* This way your text will take your gradient as its color */
     background-clip: text;
+
+    /* This will mimic a typewritter cursor */
+    border-right: 3px solid #fff;
+    animation: cursor .6s step-end infinite;
+    /* Adjust time as you want to make it faster or slower */
+
 }
 
 /* @keyframes zone */
@@ -66,5 +72,12 @@ body{
     }
     45%, 55%{
         transform: translateY(-300%);
+    }
+}
+
+@keyframes cursor {
+    /* Since it's already white, you only to make it disapear */
+    50%{
+        border-color: transparent;
     }
 }
