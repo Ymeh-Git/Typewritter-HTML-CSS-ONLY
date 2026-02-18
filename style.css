@@ -1,0 +1,49 @@
+/* ALWAYS, reset : */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* Change your font if you want to */
+    color: #ffffff;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #242424;
+}
+
+.container{
+    position: absolute;
+    top: 20%;
+    padding: 5%;
+}
+
+.container .content ol{
+    /* Remove 1. 2. 3. ... */
+    list-style: none;
+
+    /* This way, only ONE sentence will take 100% height of the content container */
+    --height: 2em;
+    height: var(--height);
+    line-height: var(--height);
+
+    /* Hide other sentences that are out of the content container*/
+    /* Comment overflow line if you want to see how it works*/
+    overflow: hidden; 
+}
+
+/* This is our sentences/words */
+.container .content ol li span{
+    font-weight: 600;
+    /* Make your take transparent */
+    color: transparent;
+    /* Background of your sentence/word gradient */
+    background: linear-gradient(to right, #2593ee, #bee62d);
+    /* This way your text will take your gradient as its color */
+    background-clip: text;
+}
