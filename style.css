@@ -34,7 +34,7 @@ body{
 
     /* Hide other sentences that are out of the content container*/
     /* Comment overflow line if you want to see how it works*/
-    /* overflow: hidden;  */
+    overflow: hidden; 
 
     display: flex;
     flex-flow: column nowrap;
@@ -43,7 +43,8 @@ body{
 }
 
 .container .content ol li{
-    animation: slide-up 12s infinite;
+    /* calc(nbr of steps * time of typing animation * 2 since it's an alternate) = time of slide's animation */
+    animation: slide calc(4*2*2s) steps(4) infinite;
 }
 
 /* This is our sentences/words */
@@ -71,18 +72,10 @@ body{
 
 /* @keyframes zone */
 
-@keyframes slide-up {
-    0%, 10%{
-        transform: translateY(0%);
-    }
-    15%, 25%{
-        transform: translateY(-100%);
-    }
-    30%, 40%{
-        transform: translateY(-200%);
-    }
-    45%, 55%{
-        transform: translateY(-300%);
+@keyframes slide {
+    100%{
+        /* Depend on how many <li> you have, here I've got 4, so -400% */
+        transform: translateY(-400%);
     }
 }
 

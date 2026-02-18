@@ -118,7 +118,7 @@ body{
 
 ## Step 4 : Animation
 
-### Step 4.1 : First animation slide-up
+### Step 4.0.5 : animation slide-up (optionnal)
 
 ```
 /* ADD your animation to your li's */
@@ -142,7 +142,7 @@ body{
 }
 ```
 
-### Step 4.2 : Second animation cursor (blinking animation)
+### Step 4.1 : First animation cursor (blinking animation)
 
 ```
 
@@ -164,11 +164,21 @@ body{
 }
 ```
 
-### Step 4.3 : Third animation typing
+### Step 4.2 : Second animation typing
 
 This one needs a lot of changes 
 
 ```
+.container .content ol{
+
+    [...]    
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
 .container .content ol li span{
 
     [...]
@@ -191,4 +201,21 @@ This one needs a lot of changes
         width: 103%;
     }
 }
+```
+
+### Step 4.3 : Third and Last animation "slide" (the one that matters the most)
+
+```
+
+.container .content ol li{
+    /* calc(nbr of steps * time of typing animation * 2 since it's an alternate) */
+    animation: slide calc(4*2*2s) steps(4) infinite;
+}
+
+@keyframes slide {
+    100%{
+        transform: translateY(-400%);
+    }
+}
+
 ```
