@@ -42,7 +42,7 @@ body{
 
     /* Hide other sentences that are out of the content container*/
     /* Comment overflow line if you want to see how it works*/
-    /* overflow: hidden;  */
+    overflow: hidden; 
 
     display: flex;
     flex-flow: column nowrap;
