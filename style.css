@@ -23,6 +23,14 @@ body{
     padding: 5%;
 }
 
+.container .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+}
+
 .container .content ol{
     /* Remove 1. 2. 3. ... */
     list-style: none;
@@ -34,7 +42,7 @@ body{
 
     /* Hide other sentences that are out of the content container*/
     /* Comment overflow line if you want to see how it works*/
-    overflow: hidden; 
+    /* overflow: hidden;  */
 
     display: flex;
     flex-flow: column nowrap;

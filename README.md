@@ -219,3 +219,20 @@ This one needs a lot of changes
 }
 
 ```
+
+## Step 5 : Bonus
+
+Add to your content a display, this way 
+
+``` 
+
+.container .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* Don't forget gap, to mimic a space between word*/
+    gap: 0.5em;
+}
+
+```
