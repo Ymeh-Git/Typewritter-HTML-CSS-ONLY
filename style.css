@@ -37,6 +37,10 @@ body{
     overflow: hidden; 
 }
 
+.container .content ol li{
+    animation: slide-up 12s infinite;
+}
+
 /* This is our sentences/words */
 .container .content ol li span{
     font-weight: 600;
@@ -46,4 +50,21 @@ body{
     background: linear-gradient(to right, #2593ee, #bee62d);
     /* This way your text will take your gradient as its color */
     background-clip: text;
+}
+
+/* @keyframes zone */
+
+@keyframes slide-up {
+    0%, 10%{
+        transform: translateY(0%);
+    }
+    15%, 25%{
+        transform: translateY(-100%);
+    }
+    30%, 40%{
+        transform: translateY(-200%);
+    }
+    45%, 55%{
+        transform: translateY(-300%);
+    }
 }

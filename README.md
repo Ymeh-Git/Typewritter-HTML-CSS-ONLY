@@ -115,3 +115,30 @@ body{
 }
 ```
 <hr>
+
+## Step 4 : Animation
+
+### Step 4.1 : First animation slide-up
+
+```
+/* ADD your animation to your li's */
+.container .content ol li{
+    animation: slide-up 12s infinite;
+}
+
+@keyframes slide-up {
+    0%, 10%{
+        transform: translateY(0%);
+    }
+    15%, 25%{
+        transform: translateY(-100%);
+    }
+    30%, 40%{
+        transform: translateY(-200%);
+    }
+    45%, 55%{
+        transform: translateY(-300%);
+    }
+}
+```
+
