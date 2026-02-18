@@ -34,7 +34,12 @@ body{
 
     /* Hide other sentences that are out of the content container*/
     /* Comment overflow line if you want to see how it works*/
-    overflow: hidden; 
+    /* overflow: hidden;  */
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .container .content ol li{
@@ -51,9 +56,15 @@ body{
     /* This way your text will take your gradient as its color */
     background-clip: text;
 
+    white-space: nowrap;
     /* This will mimic a typewritter cursor */
     border-right: 3px solid #fff;
-    animation: cursor .6s step-end infinite;
+
+    display: inline-block;
+
+    animation: 
+    cursor .6s step-end infinite,
+    typing 2s steps(9) infinite alternate;
     /* Adjust time as you want to make it faster or slower */
 
 }
@@ -79,5 +90,15 @@ body{
     /* Since it's already white, you only to make it disapear */
     50%{
         border-color: transparent;
+    }
+}
+
+@keyframes typing {
+    0%,10%{
+        width: 0%;
+    }
+    70%,100%{
+        /* 103% for a gap */
+        width: 103%;
     }
 }

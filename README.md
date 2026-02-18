@@ -148,11 +148,11 @@ body{
 
 .container .content ol li span{
 
-[...]
+    [...]
 
-/* This will mimic a typewritter cursor */
-border-right: 3px solid #fff;
-animation: cursor .8s step-end infinite;
+    /* This will mimic a typewritter cursor */
+    border-right: 3px solid #fff;
+    animation: cursor .8s step-end infinite;
 
 }
 
@@ -160,6 +160,35 @@ animation: cursor .8s step-end infinite;
     /* Since it's already white, you only to make it disapear */
     50%{
         border-color: transparent;
+    }
+}
+```
+
+### Step 4.3 : Third animation typing
+
+This one needs a lot of changes 
+
+```
+.container .content ol li span{
+
+    [...]
+
+    white-space: nowrap;
+
+    display: inline-block;
+
+    animation: 
+    cursor .6s step-end infinite,
+    typing 2s steps(9) infinite alternate;
+}
+
+@keyframes typing {
+    0%,10%{
+        width: 0%;
+    }
+    70%,100%{
+        /* 103% for a gap */
+        width: 103%;
     }
 }
 ```
